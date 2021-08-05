@@ -1,0 +1,531 @@
+*,::before,::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*********** La Nav ***************/
+
+.nav-menu{
+    width: 100%;
+    height:50px;
+    background-color: #333;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-menu{
+    margin:0 10px;
+    cursor: pointer;
+    font-size: 22px;
+    color:white;
+}
+
+.item-menu::after{
+    content:'';
+    display:block;
+    width: 100%;
+    height:4px;
+    background-color: #fff;
+    opacity:0;
+}
+
+.item-menu:hover{
+    transform: scale(1.04);
+    transition: 0.3s;
+}
+
+.item-menu:hover::after{
+    opacity:1;
+    transition: 0.3s;
+}
+
+/*********Le bloc presentation********/
+
+.presentation{
+    width: 100%;
+    height: 100vh;
+    background: url('ressources/image_large/img6.jpg') center / cover;
+    position: relative;
+}
+
+.presentation-contenu{
+    width: 80%;
+    min-width: 280px;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.presentation-contenu h1{
+    font-size: 5rem;
+    padding-bottom:20px;
+    border-bottom: 2px solid white;
+}
+
+.presentation-contenu h3{
+    font-size: 2.8rem;
+    margin-top:20px;
+}
+
+.presentation-contenu .btn{
+    margin-top:20px;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: darkcyan;
+    color:white;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+/****** section quoi faire *****/
+.quoi-faire{
+    width: 85%;
+    height: 3000px;
+    position:relative;
+    margin:0 auto;
+    padding:10px;
+    border-bottom: 1px dashed black;
+}
+
+.quoi-faire .titre{
+    width:400px;
+    height:100%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    z-index: -1;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.quoi-faire h2{
+    text-align: center;
+    width: 400px;
+    height:80px;
+    margin:0 auto;
+    font-size: 2.8rem;
+    margin-top: 50px;
+}
+
+.quoi-faire h2::first-letter{
+    text-transform: uppercase;
+    color: crimson;
+}
+
+/*** Bloc de gauche ********/
+
+.contenu-gauche{
+    max-width: 300px;
+    height: auto;
+    background-color: crimson;
+    position:relative;
+    top: 150px;
+    left:80px;
+}
+
+.contenu-gauche-img1{
+    padding:15px;
+    color:white;
+    text-align: left;
+    position:relative;
+}
+
+.contenu-gauche-img1 h4{
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+.contenu-gauche-img1 p{
+    font-size: 1.2rem;
+    max-width: 120px;
+}
+
+.contenu-gauche-img2{
+    width: 300px;
+    height: 800px;
+    background: url('ressources/image_haute/img1.jpg') center / cover;
+    position: absolute;
+    top: 80px;
+    left:150px;
+}
+
+/******* bloc de droite *****/
+
+.contenu-droite{
+    max-width: 300px;
+    height: auto;
+    background-color: crimson;
+    position:relative;
+    top: 300px;
+    margin-left:auto;
+    margin-right: 80px;
+}
+
+.contenu-droite-img1{
+    padding:15px;
+    color:white;
+    text-align:end;
+    position:relative;
+}
+
+.contenu-droite-img1 h4{
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+.contenu-droite-img1 p{
+    font-size: 1.2rem;
+    max-width: 150px;
+    text-align: left;
+    margin-left:auto;
+}
+
+.contenu-droite-img2{
+    width: 300px;
+    height: 500px;
+    background: url('ressources/image_haute/img2.jpg') center / cover;
+    position: absolute;
+    top: 80px;
+    right:200px;
+}
+
+/****** 2eme bloc de gauche ***/
+
+.contenu-gauche-bis{
+    max-width: 300px;
+    height: auto;
+    margin-bottom:70px;
+    background-color: crimson;
+    position:relative;
+    top: 400px;
+    left:80px;
+}
+
+.contenu-gauche-bis-img1{
+    padding:15px;
+    color:white;
+    text-align: left;
+    position:relative;
+}
+
+.contenu-gauche-bis-img1 h4{
+    font-size: 1.2rem;
+    padding: 10px 0px;
+}
+
+.contenu-gauche-bis-img1 p{
+    font-size: 1.2rem;
+    max-width: 120px;
+}
+
+.contenu-gauche-bis-img2{
+    width: 300px;
+    height: 800px;
+    background: url('ressources/image_haute/img3.jpg') center / cover;
+    position: absolute;
+    top: 80px;
+    left:150px;
+}
+
+/*********Bloc parallax**********/
+
+.parallax{
+    width: 100%;
+    height:600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+
+.effet-parallax{
+    width: 100%;
+    height:250px;
+    background: url('ressources/image_large/img6.jpg') center / cover;
+    background-attachment: scroll;
+    position:relative;
+}
+
+.effet-parallax h4{
+    font-size: 2.2rem;
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*******Container-tarifs********/
+.tarifs{
+    border-bottom: 1px dashed black;
+}
+
+.tarifs h4{
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.tarifs h4::first-letter{
+    text-transform: uppercase;
+    color: crimson;
+}
+
+/*********Tarifs************/
+
+.container-carte{
+    width: 100%;
+    /* min-width: 400px; */
+    flex-wrap: wrap;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    margin:0 auto;
+    margin-bottom: 25px;
+}
+.carte{
+    width: 32%;
+    height:auto;
+    justify-items: center;
+    border: 1px solid black;
+    box-shadow: 0px 3px 10px black;
+    transition: 0.5s;
+}
+
+.carte:hover{
+    transform:scale(1.04);
+}
+
+.container-carte:hover > .carte:not(:hover){
+    filter:blur(5px);
+    opacity: 0.5;
+}
+
+.carte-titre{
+    font-size: 2rem;
+    color:black;
+    background-color:salmon;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 85%);
+    text-align: center;
+    padding:15px;
+}
+
+.carte-prix{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px;
+    border-bottom: 1px solid black
+}
+
+.menu-details{
+    margin-top: 10px;
+    padding:15px;
+    border-bottom: 1px solid black;
+}
+
+.item-details{
+    font-size: 0.9rem;
+    padding: 20px 10px;
+}
+
+.item-details:nth-child(1),
+.item-details:nth-child(3){
+    background-color: gainsboro;
+}
+
+.carte-reserver{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carte-reserver .btn-reserver{
+    margin-top:20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8%;
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 10px;
+}
+
+.carte-reserver .btn-reserver:hover{
+    background-color: salmon;
+    color:white;
+}
+
+/*******Contact*********/
+
+.contact h4{
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 40px 0px
+}
+
+.contact h4::first-letter{
+    text-transform: uppercase;
+    color: crimson;
+}
+
+.formulaire{
+    width: 90%;
+    min-width: 320px;
+    height:auto;
+    margin:0 auto;
+    padding:15px;
+    font-family: inherit;
+}
+
+label,input,textarea{
+    display:block;
+    padding:15px 0px;
+    width: 100%;
+    outline:none;
+    border:none;
+}
+
+label{
+    font-size:1.1rem;
+}
+
+input{
+    border-bottom:1px solid black;
+}
+
+textarea{
+    border:1px solid black;
+    margin: 15px 0px;
+    height:200px;
+    width: 100%;
+}
+
+.contact .btn-contact{
+    width: 40%;
+    padding:10px 15px;
+    font-size:1.2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    border:1px solid black;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.contact .btn-contact:hover{
+    background-color: salmon;
+    color:white;
+}
+
+/********Footer************/
+
+footer{
+    background-color: #333;
+    text-align: center;
+    width: 100%;
+    height:40px;
+    line-height: 40px;
+}
+
+footer span{
+    color:white;
+    font-size:0.8rem;
+}
+
+/***********PARTIE RESPONSIVE *******/
+
+@media screen and (max-width:600px){
+    
+    /***Responsive Header *****/
+
+.item-menu{
+    font-size: 16px;
+}
+
+.presentation-contenu h1{
+    font-size:3rem;
+}
+
+.presentation-contenu h3{
+    font-size:1.8rem;
+}
+
+.presentation-contenu .btn{
+    font-size:1rem;
+}
+
+/*****Section quoi faire *******/
+.quoi-faire{
+    width: 100%;
+    height:2800px;
+}
+.quoi-faire h2{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.contenu-gauche{
+    width: 100%;
+    left: 8px;
+}
+
+.contenu-droite{
+    margin-right: -25px;
+}
+
+.contenu-gauche-bis{
+    width: 100%;
+    left: 8px;
+}
+
+/********Responsive Parallax****/
+
+.effet-parallax h4{
+    font-size:1.8rem;
+}
+
+/******Responsive Tarifs******/
+
+.tarifs{
+    width: 100%;
+}
+
+.container-carte{
+    width:100%;
+    flex-direction: column;
+}
+
+.tarifs h4{
+    font-size: 2rem;
+}
+
+.carte{
+    width: 80%;
+    margin-bottom:15px;
+}
+
+/*****Contact********/
+
+.contact h4{
+    font-size: 2rem;
+}
+}
+
